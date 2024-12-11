@@ -3,4 +3,6 @@ class HomeController < ApplicationController
     @users = User.all
       render({ :template => "home/index" })
   end
+
+
 end
