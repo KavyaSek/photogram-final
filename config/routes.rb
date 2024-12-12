@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   # Route for home
   get("/", { :controller => "home", :action => "index" })
+  get("/users", { :controller => "home", :action => "index" })
+  
   
   # Routes for the Like resource:
 
@@ -78,9 +80,20 @@ Rails.application.routes.draw do
 
   #------------------------------
 
+  ##kavya updated:
+  post 'follow_requests/:id/accept', to: 'follow_requests#accept', as: 'accept_follow_request'
+
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  get("/users/:name", { :controller => "home", :action => "user_details" })
+
+
+
+
+
+
 end

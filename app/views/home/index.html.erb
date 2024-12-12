@@ -31,6 +31,8 @@
           </a>
         </li>
     </ul>
+
+  <a> Signed in successfully </a>
  
   </body>
 
@@ -117,7 +119,7 @@
         <% end %>       
         </td>
         
-        <td><a href="/users/details">
+        <td><a href="/users/<%= user.username %>">
             Show details
           </a></td>
       </tr>
