@@ -90,6 +90,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get("/users/:name", { :controller => "home", :action => "user_details" })
+  get("/users/:name/feed", { :controller => "users", :action => "feed" })
 
 
 
